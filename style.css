@@ -1,0 +1,55 @@
+#Introduccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Source serif pro;
+    text-align: center;
+    font-size: 1em;
+}
+
+h1{
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+#Imagen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    font-weight: bold;
+    color:black;
+}
+#imagenhbadger{
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+}
+#Indice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.indices{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+#Javascript{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Source serif pro;
+    text-align: center;
+    font-size: 1em;
+}
