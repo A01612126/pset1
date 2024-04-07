@@ -1,55 +1,36 @@
-#Introduccion {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Source serif pro;
+/* General styles */
+body {
+    font-family: 'Source serif pro', serif;
+    font-size: 1.25em;
     text-align: center;
-    font-size: 1em;
 }
 
-h1{
+h1, h2 {
     font-size: 2em;
     font-weight: bold;
     color: black;
-    text-align: center;
 }
 
-#Imagen{
+#Indice, #Imagen, #Javascript, #Number, #String, #Boolean, #Null, #Undefined, #Symbol, #BigInt, #Object {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1em;
 }
 
-h2{
-    font-size: 2em;
-    font-weight: bold;
-    color:black;
-}
-#imagenhbadger{
-    width: 30%;
-    height: 30%;
-    border-radius: 10%;
-}
-#Indice{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.indices{
+.indices {
     font-size: 1.5em;
     font-weight: bold;
     color: black;
 }
-#Javascript{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Source serif pro;
-    text-align: center;
-    font-size: 1em;
+
+#Indice ul {
+    text-align: left;
+}
+
+#imagen {
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
 }

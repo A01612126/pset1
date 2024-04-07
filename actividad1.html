@@ -5,13 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artículo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        code {
+            display: block;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 10px;            
+        }
+
+    </style>
+     <style>
+        ul {
+            list-style-type: none;
+            padding: 2;
+            margin: 0;
+        }
+
+        li {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        li strong {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Artículo</h1>
 
     <div id="Introduccion">
        <h2>Introducción</h2> 
-       Esta página es un actividad de la primera clase junto con la investigación de las variables de Javascript.
+       <p>Las variables son elementos fundamentales en la programación, ya que permiten almacenar y manipular datos de manera dinámica.<br>
+        En esencia, una variable es un contenedor que puede contener diferentes valores durante la ejecución de un programa. La importancia de las variables
+        radica en su capacidad para almacenar información, realizar cálculos, tomar decisiones y controlar el flujo de un programa.<br>
+        Sin ellas, la programación sería estática y limitada en su capacidad para resolver problemas de manera eficiente y flexible.</p> 
     </div>
 
     <div id="Indice">
@@ -20,46 +50,109 @@
             <li><a href="#Introduccion">Introducción</a></li>
             <li><a href="#Imagen">Imágen</a></li>
             <li><a href="#Javascript">Javascript</a></li>
+            <ul>
+                <li><a href="#Number">Number</a></li>
+                <li><a href="#String">String</a></li>
+                <li><a href="#Boolean">Boolean</a></li>
+                <li><a href="#Null">Null</a></li>
+                <li><a href="#Undefined">Undefined</a></li>
+                <li><a href="#Symbol">Symbol</a></li>
+                <li><a href="#Object">Object</a></li>
+            </ul>
         </ul>
     </div>
 
     <div id="Imagen">
-        <p>Aquí se muestra la imagen de un Honey Badger</p>
-        <img src="honeyb.jpeg" id="imagenhbadger">
+        <img src="js.png" id="imagen">
     </div>
 
     <div id="Javascript">
         <h2>Javascript</h2>
-        <p> Aquí se analizarán los tipos de variables que existen en Javascript</p>
+        <p> Aquí se analizarán los tipos de datos que existen en Javascript. 
+            Empecemos primero por definir los tipos de variables y sus diferencias</p>
+        <ul>
+            <li><strong>1. var:</strong> Las variables declaradas con var tienen un ámbito de función o ámbito global, lo que significa que 
+            pueden ser accedidas desde cualquier parte de la función en la que están definidas o desde cualquier lugar del script si se definen fuera de una función.</li>
+            <li><strong>2. let:</strong> Las variables declaradas con let tienen un ámbito de bloque, lo que significa que solo están disponibles dentro del bloque en el que se declaran
+            (por ejemplo, dentro de un bucle for, una declaración if, o un bloque de función).</li>
+            <li><strong>3. const:</strong>Las variables declaradas con const también tienen un ámbito de bloque, al igual que let.
+            A diferencia de let, una vez que una variable se asigna utilizando const, no se puede reasignar ni redeclarar.</li>
+        </ul>
+        <p> Ahora analizaremos los tipos de datos.</p>
+        <h2>Tipo De Dato Primitivo</h2>
         <p>Existen tipos de datos primitivos y no primitivos en Javascript. Veamos qué los definen</p>
-        <h3>Tipo De Dato Primitivo</h3>
-        <p>Estos tipos de datos son los que ya fueron predefinidos por JS, como lo son: Number, String, Boolean, Null, Undefined, Symbol, BigInt</p>
-        <h4>Number</h4>
-        <p>Los "number" en Javascript son siempre guardados con un formato binario de 64 bits de doble precisión. En Javascript no se necestia declarar float, int, etc. para declarar diferentes valores numéricos</p>
-        <h4>String</h4>
-        <p>En Javascript, los String son similares a oraciones ya que están hechos de de una lista de caractéres.</p>
-        <h4>Boolean</h4>
-        <p>Representa una entidad lógica y puede tener sólo dos valores: verdadero y falso.</p>
-        <h4>Null</h4>
-        <p>Solo puede tener un valor y es sí mismo (null).</p>
-        <h4>Undefined</h4>
-        <p>Una variable a la que no se le asgina un valor se le considera como indefinida o "undefined".</p>
-        <h4>Symbol</h4>
-        <p>Los símbolos devuelven identificadores únicos que pueden ser usados para añadir llaves de propiedad únicas a un objeto que no haga colisión con llaves de otro código que se pueda añadir al objeto.</p> 
-        <h4>BigInt</h4>
-        <p>Un tipo de dato que nos permite representar números enteros mayores a lo permitido con "number".</p>
-        <h3>Tipo De Dato No Primitivo</h3>
-        <p>Se derivan de los datos primitivos y también se les conoce como Tipos de Datos Derivados o Tipos de datos referenciados</p>
-        <h4>Objetos</h4>
-        <p>Son el tipo de dato más importante y conforma la base sobre la cual se construye el Javascript moderno</p>
+        <h2>Tipo De Dato Primitivo</h2>
+        <p>Estos tipos de datos son los que ya fueron predefinidos por JS, como lo son: Number, String, Boolean, Null, Undefined, Symbol, BigInt.</p>
 
-        <h3>Bucles en Javascript</h3>
-        <h4>Bucle 'for'</h4>
-        <p> El bucle for es uno de los bucles más comunes y versátiles en JavaScript. Se utiliza cuando se conoce exactamente cuántas veces quieres que se ejecute el código. </p>
-        <h4>Bucle 'while'</h4>
-        <p>El bucle while se utiliza cuando no se sabe cuántas veces se debe repetir el código, pero se repite mientras una condición sea verdadera.</p>
-        <h4>Bucle 'do while'</h4>
-        <p>Similar al bucle while, pero garantiza que el código se ejecute al menos una vez antes de verificar la condición.</p>
+        <h3 id="Number">Number</h3>
+        <p>Los "number" en Javascript son siempre guardados con un formato binario de 64 bits de doble precisión.<br>
+        En Javascript no se necestia declarar float, int, etc. para declarar diferentes valores numéricos. Ej:</p>
+        <code>var age = 30;</code>
+
+        <h3 id="String">String</h3>
+        <p>En Javascript, los String son similares a oraciones ya que están hechos de de una lista de caractéres. Ej:</p>
+        <code>var name = "John";</code>
+
+        <h3 id="Boolean">Boolean</h3>
+        <p>Representa una entidad lógica y puede tener sólo dos valores: verdadero y falso. Ej:</p>
+        <code>var isStudent = true;</code>
+
+        <h3 id="Null">Null</h3>
+        <p>Solo puede tener un valor y es sí mismo (null). Ej:</p>
+        <code>var emptyValue = null;</code>
+
+        <h3 id="Undefined">Undefined</h3>
+        <p>Una variable a la que no se le asgina un valor se le considera como indefinida o "undefined". Ej:</p>
+        <code>var undefinedValue;</code>
+
+        <h3 id="Symbol">Symbol</h5>
+        <p>Los símbolos devuelven identificadores únicos que pueden ser usados para añadir<br>
+        llaves de propiedad únicas a un objeto que no haga colisión con llaves de otro código que se pueda añadir al objeto. Ej:</p> 
+        <code>var uniqueSymbol = Symbol("description");</code>
+
+        <h3 id="BigInt">BigInt</h3>
+        <p>Un tipo de dato que nos permite representar números enteros mayores a lo permitido con "number". Ej:</p>
+        <code>var bigNumber = 1234567890123456789012345678901234567890n;</code>
+
+        <h2>Tipo De Dato No Primitivo</h2>
+        <p>Se derivan de los datos primitivos y también se les conoce como Tipos de Datos Derivados o Tipos de datos referenciados.</p>
+        <h3 id="Object">Object</h3>
+        <p>Son el tipo de dato más importante y conforma la base sobre la cual se construye el Javascript moderno. Ej:</p>
+        <code>var person = {
+            name : "John",
+            age: 30
+            }; </code>
+
+        <h2>Bucles en Javascript</h2>
+        <h3>Bucle 'for'</h3>
+        <p> El bucle for es uno de los bucles más comunes y versátiles en JavaScript.<br>
+        Se utiliza cuando se conoce exactamente cuántas veces quieres que se ejecute el código. Ej:</p>
+        <code>
+            for (var i = 0; i < 5; i++) {
+                console.log("Número: " + i);
+            }</code>
+    
+        <h3>Bucle 'while'</h3>
+        <p>El bucle while se utiliza cuando no se sabe cuántas veces se debe repetir el código, pero se repite mientras una condición sea verdadera. Ej:</p>
+        <code>
+            var counter = 0;
+            while (counter < 5) {
+                console.log("Número: " + counter);
+                counter++;
+            }</code>
+
+        <h3>Bucle 'do while'</h3>
+        <p>Similar al bucle while, pero garantiza que el código se ejecute al menos una vez antes de verificar la condición. Ej:</p>
+        <code>
+            var counter = 0;
+            do {
+                console.log("Número: " + counter);
+                counter++;
+            } while (counter < 5);</code>
     </div>
+    <h2>Conclusión</h2>
+        <p>En conclusión, las variables son elementos esenciales en la programación que permiten almacenar, manipular y gestionar datos de manera eficiente.
+            Su importancia radica en su capacidad para adaptarse y cambiar durante la ejecución de un programa, lo que proporciona flexibilidad y poder de resolución de problemas a los desarrolladores.
+            Comprender cómo utilizar variables de manera efectiva es fundamental para convertirse en un programador competente y crear software funcional y de alta calidad.</p>
 </body>
 </html>
